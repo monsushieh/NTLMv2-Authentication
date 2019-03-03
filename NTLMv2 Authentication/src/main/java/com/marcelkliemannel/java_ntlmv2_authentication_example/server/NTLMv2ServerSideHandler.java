@@ -44,15 +44,15 @@ class NTLMv2ServerSideHandler extends AbstractHandler
         if (ntlmManager == null)
         {
             // Should be the same as on client side configuration
-            //String domain                                    = "COM";
-            String domain                                      = "lab.com";
-            String domainControllerHost               = "192.168.2.220";
-            String domainControllerNetbiosName = "lab";
+            //String domain                    = "COM";
+            String domain                      = "omtest3.com.tw";
+            String domainControllerHost        = "192.168.11.71";
+            String domainControllerNetbiosName = "OMSRV-03";
             // The 'liferay' library requires that there is an '@' and a '$' sign
             // in the service account username to determine the 'account name'
             // (everything before the '@' sign) and the 'computer name' (everything
             // before the '$' sign.
-            String serviceAccountUsername = "searchuser@lab$";
+            String serviceAccountUsername = "Administrator@OMSRV-03$";
             String serviceAccountPassword  = "1qaz@WSX";
             ntlmManager = new NtlmManager(domain, domainControllerHost, domainControllerNetbiosName, serviceAccountUsername, serviceAccountPassword);
         }
