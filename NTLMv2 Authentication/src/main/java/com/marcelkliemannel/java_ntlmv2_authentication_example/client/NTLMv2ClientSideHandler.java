@@ -35,7 +35,7 @@ class NTLMv2ClientSideHandler
 
   // Should be identically as on server side configuration
   //private final static String DOMAIN = "COM";
-  private final static String DOMAIN = "lab.com";
+  private final static String DOMAIN = "omtest3.com.tw";
   private final static String USERNAME = "test001";
   private final static String PASSWORD = "1qaz@WSX";
 
