@@ -33,7 +33,7 @@ class NTLMv2ServerSideHandler extends AbstractHandler
 {
     // ---- Class Variables
     private static final SecureRandom secureRandom = new SecureRandom();
-    private static         NtlmManager    ntlmManager;
+    private static       NtlmManager  ntlmManager;
 
     // ---- Instance Variables
     private final Map<String, byte[]> usernameChallenges = new HashMap<>();
@@ -47,12 +47,12 @@ class NTLMv2ServerSideHandler extends AbstractHandler
             //String domain                    = "COM";
             String domain                      = "omtest3.com.tw";
             String domainControllerHost        = "192.168.11.71";
-            String domainControllerNetbiosName = "OMSRV-03";
+            String domainControllerNetbiosName = "omtest3";
             // The 'liferay' library requires that there is an '@' and a '$' sign
             // in the service account username to determine the 'account name'
             // (everything before the '@' sign) and the 'computer name' (everything
             // before the '$' sign.
-            String serviceAccountUsername = "Administrator@OMSRV-03$";
+            String serviceAccountUsername = "searchuser@omtest3$";
             String serviceAccountPassword  = "1qaz@WSX";
             ntlmManager = new NtlmManager(domain, domainControllerHost, domainControllerNetbiosName, serviceAccountUsername, serviceAccountPassword);
         }
